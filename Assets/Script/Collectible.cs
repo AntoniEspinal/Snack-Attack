@@ -12,6 +12,7 @@ public class Collectible : MonoBehaviour
        if (other.tag == "Collectible")
        {
             score += 1;
+            Debug.Log("Score: " + score);
             Destroy(other.gameObject);
        }
        
