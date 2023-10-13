@@ -8,11 +8,9 @@ using UnityEngine.UI;
 public class CollectibleCount : MonoBehaviour
 {
     TMPro.TMP_Text text;
-    public int score;
     public List<GameObject> target; 
     private float spawnRate = 1.0f;
-    public GameObject titleScreen;
-    public TextMeshProUGUI scoreText; 
+    public GameObject titleScreen; 
     public TextMeshProUGUI gameOverText;
     public bool isGameActive;
     public Button restartButton; 
@@ -22,8 +20,6 @@ public class CollectibleCount : MonoBehaviour
     public void StartGame(int difficulty)
     {
         StartCoroutine(SpawnTarget());
-        score = 0;
-        UpdateScore(0);
         isGameActive = true;
         titleScreen.SetActive(false);
         spawnRate /= difficulty;
@@ -51,9 +47,5 @@ public class CollectibleCount : MonoBehaviour
         }
     }
 
-    public void UpdateScore(int scoreToAdd)
-    {
-        score += scoreToAdd;
-        scoreText.text = "Score" + score;
-    }
+    
 }

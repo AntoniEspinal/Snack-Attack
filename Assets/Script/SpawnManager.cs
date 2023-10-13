@@ -24,12 +24,8 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnRandomCollectible()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        Vector3 spawnPos = new Vector3(Random.Range(-11, 12), 8, Random.Range(4, 24));
         int collectibleIndex = Random.Range(0, collectiblePrefabs.Length);
         Instantiate(collectiblePrefabs[collectibleIndex], spawnPos, collectiblePrefabs[collectibleIndex].transform.rotation);
-       
-        Vector3 spawnDown = new Vector3(-3, 6, 18);
-        Instantiate(collectiblePrefabs[collectibleIndex], spawnDown, collectiblePrefabs[collectibleIndex].transform.rotation);
-
     }
 }

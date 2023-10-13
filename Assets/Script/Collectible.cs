@@ -5,13 +5,14 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     public static int total;
-    public int score;
+    int score = 0;
+    public int scoreValue = 0;
     
     void OnTriggerEnter(Collider other)
     {
        if (other.tag == "Collectible")
        {
-            score += 1;
+            score += scoreValue;
             Debug.Log("Score: " + score);
             Destroy(other.gameObject);
        }
