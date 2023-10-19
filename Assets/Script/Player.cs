@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 10;
-    float zMax = 15;
+    float zMax = 20;
     float zMin = -5;
     public float verticalInput;
     

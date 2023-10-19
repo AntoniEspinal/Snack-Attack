@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public static int total;
-    int score = 0;
-    public int scoreValue = 0;
-    
-    void OnTriggerEnter(Collider other)
+    public int scoreToAdd;
+    private Score gameManager;
+
+    void Start()
     {
-       if (other.tag == "Collectible")
-       {
-            score += scoreValue;
-            Debug.Log("Score: " + score);
-            Destroy(other.gameObject);
-       }
-       
+        gameManager = GameObject.Find("Game Manager").GetComponent<Score>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        gameManager.UpdateScore(scoreToAdd); 
     }
 }

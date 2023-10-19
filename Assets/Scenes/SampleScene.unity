@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
+  speed: 15
   xRange: 10
   verticalInput: 0
 --- !u!114 &788855581
@@ -1019,7 +1019,7 @@ GameObject:
   - component: {fileID: 1938304726}
   - component: {fileID: 1938304728}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
